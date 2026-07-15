@@ -1,6 +1,6 @@
 // bump CACHE to force clients to pick up a new shell
-const CACHE = "packet-20260715141156";
-const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png"];
+const CACHE = "packet-20260715153542";
+const SHELL = ["./", "index.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png", "logo.jpg"];
 self.addEventListener("install", e => { self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); });
 self.addEventListener("activate", e => { e.waitUntil(
