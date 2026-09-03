@@ -1,0 +1,27 @@
+{
+  "name": "Jessica Lorae",
+  "short_name": "Jessica",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#FEF3E6",
+  "theme_color": "#F8663C",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
