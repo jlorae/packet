@@ -1,0 +1,13 @@
+#!/bin/sh
+# No file over 1 MB — Jessica's rule (2026-09-07). One exemption, on purpose and temporary:
+# index.html is the built packet (~17 MB) and the robot still commits it every morning until the
+# artifact-publish change lands (DAILY-PLAN A9 on her computer). Drop the exemption then.
+limit=1048576
+bad=0
+for f in $(git diff --cached --name-only --diff-filter=AM); do
+  [ "$f" = "index.html" ] && continue
+  [ -f "$f" ] || continue
+  s=$(wc -c < "$f")
+  if [ "$s" -gt "$limit" ]; then echo "pre-commit: $f is $s bytes (> 1 MB) — not allowed"; bad=1; fi
+done
+exit $bad
