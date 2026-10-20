@@ -1,0 +1,13 @@
+# jlorae/packet — rules in CLAUDE.md
+# dry-run and test builds are never saved
+*.dryrun.html
+*.dryrun.*
+dry-run*
+*dry-run*
+# a zip of things already loose is a second copy
+*.zip
+# local noise
+.DS_Store
+Thumbs.db
+__pycache__/
+# NOTE: git cannot ignore by size. The 1 MB rule is enforced by .githooks/pre-commit (see CLAUDE.md).
